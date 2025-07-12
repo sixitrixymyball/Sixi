@@ -1,0 +1,131 @@
+:root {
+  --bg: #0e0e10;
+  --text: #fff;
+  --accent: #1db954;
+  --trap: #ff3b30;
+  --lofi: #7f8c8d;
+  --pop: #f39c12;
+  --rock: #9b59b6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #111, #1c1c1c);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.highlight {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.btn {
+  margin-top: 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #1ed760;
+  transform: scale(1.05);
+}
+
+.genres {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.genre-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.trap { border-left: 6px solid var(--trap); }
+.card.lofi { border-left: 6px solid var(--lofi); }
+.card.pop { border-left: 6px solid var(--pop); }
+.card.rock { border-left: 6px solid var(--rock); }
+
+.quiz-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #121212;
+}
+
+select {
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  background: #222;
+  color: white;
+  border: 1px solid #333;
+}
+
+.quiz-btn {
+  margin-top: 1rem;
+}
+
+.result-box {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: #0a0a0a;
+  font-size: 0.9rem;
+  color: #777;
+}
