@@ -2,68 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>What Your Music Taste Says About You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ultimate Music Personality Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Meta for SEO and social sharing -->
-  <meta name="title" content="What Your Music Taste Says About You">
-  <meta name="description" content="Take the quiz that reveals your music personality. Trap? Lo-fi? Pop? Rock? Find out.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="What Your Music Taste Says About You">
-  <meta property="og:description" content="Discover your inner music energy. Take the quiz now.">
-  <meta property="og:image" content="https://yourname.vercel.app/preview.png">
-  <meta property="og:url" content="https://yourname.vercel.app">
+  <meta name="description" content="Discover your music personality with our in-depth multi-question quiz. Trap, Lo-fi, Pop or Rock — find your vibe!" />
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1><span class="highlight">🎶 Your Music Taste</span> Says Everything</h1>
-      <p>Pick your vibe and reveal your musical identity.</p>
-      <a href="#quiz" class="btn">Take the Quiz</a>
-    </div>
-  </header>
+  <div id="app">
 
-  <section class="genres" id="genres">
-    <h2>🎧 Genre Vibes</h2>
-    <div class="genre-grid">
-      <div class="card trap">
-        <h3>Trap</h3>
-        <p>Ambitious, confident, high-energy. You don’t miss.</p>
+    <nav class="sidebar">
+      <div class="logo">
+        <h2>🎵 MusicVibe</h2>
       </div>
-      <div class="card lofi">
-        <h3>Lo-fi</h3>
-        <p>Chill, introspective, emotionally deep. A soft thinker.</p>
-      </div>
-      <div class="card pop">
-        <h3>Pop</h3>
-        <p>Trendy, upbeat, bubbly. Life of the party.</p>
-      </div>
-      <div class="card rock">
-        <h3>Rock</h3>
-        <p>Bold, expressive, intense. You live loud and proud.</p>
-      </div>
-    </div>
-  </section>
+      <ul>
+        <li><a href="#home" class="active" data-section="home">Home</a></li>
+        <li><a href="#quiz" data-section="quiz">Take Quiz</a></li>
+        <li><a href="#playlist" data-section="playlist">Playlist Analyzer</a></li>
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+      <footer>
+        <small>© 2025 MusicVibe</small>
+      </footer>
+    </nav>
 
-  <section class="quiz-section" id="quiz">
-    <h2>🧠 Music Personality Quiz</h2>
-    <p>Pick your favorite genre:</p>
-    <select id="genreSelect">
-      <option value="">-- Select One --</option>
-      <option value="trap">Trap</option>
-      <option value="lofi">Lo-fi</option>
-      <option value="pop">Pop</option>
-      <option value="rock">Rock</option>
-    </select>
-    <button class="btn quiz-btn" onclick="getResult()">Reveal My Vibe</button>
-    <div id="result" class="result-box"></div>
-  </section>
+    <main>
+      <!-- HOME SECTION -->
+      <section id="home" class="section active">
+        <div class="hero">
+          <h1>What Does <span>YOUR MUSIC</span> Say About You?</h1>
+          <p>Take our ultimate multi-step music personality quiz and find out your true vibe.</p>
+          <button id="startQuizBtn" class="btn-primary">Start Quiz</button>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 YourName • Built with ❤️</p>
-  </footer>
+      <!-- QUIZ SECTION -->
+      <section id="quiz" class="section">
+        <h2>Music Personality Quiz</h2>
+        <div id="quizContainer">
+          <div id="progressBar">
+            <div id="progress"></div>
+          </div>
+          <div id="questionContainer"></div>
+          <div class="quiz-nav">
+            <button id="prevBtn" class="btn-secondary" disabled>Previous</button>
+            <button id="nextBtn" class="btn-primary">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLAYLIST ANALYZER SECTION -->
+      <section id="playlist" class="section">
+        <h2>Analyze Your Playlist</h2>
+        <p>Paste your Spotify, YouTube, or Apple Music playlist link below:</p>
+        <input type="text" id="playlistUrl" placeholder="Paste playlist URL here" />
+        <button id="analyzeBtn" class="btn-primary">Analyze Playlist</button>
+        <div id="playlistResult" style="margin-top: 2rem;"></div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
+        <h2>About MusicVibe</h2>
+        <p>
+          MusicVibe was created to help you discover the hidden personality traits reflected in your favorite music genres.
+          Whether you love Trap, Lo-fi, Pop, or Rock, we analyze your choices to reveal your unique vibe.
+        </p>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Questions, feedback, or just want to share your vibe? Reach out to us!</p>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
