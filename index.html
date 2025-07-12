@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What Your Music Taste Says About You</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Meta for SEO and social sharing -->
+  <meta name="title" content="What Your Music Taste Says About You">
+  <meta name="description" content="Take the quiz that reveals your music personality. Trap? Lo-fi? Pop? Rock? Find out.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="What Your Music Taste Says About You">
+  <meta property="og:description" content="Discover your inner music energy. Take the quiz now.">
+  <meta property="og:image" content="https://yourname.vercel.app/preview.png">
+  <meta property="og:url" content="https://yourname.vercel.app">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1><span class="highlight">🎶 Your Music Taste</span> Says Everything</h1>
+      <p>Pick your vibe and reveal your musical identity.</p>
+      <a href="#quiz" class="btn">Take the Quiz</a>
+    </div>
+  </header>
+
+  <section class="genres" id="genres">
+    <h2>🎧 Genre Vibes</h2>
+    <div class="genre-grid">
+      <div class="card trap">
+        <h3>Trap</h3>
+        <p>Ambitious, confident, high-energy. You don’t miss.</p>
+      </div>
+      <div class="card lofi">
+        <h3>Lo-fi</h3>
+        <p>Chill, introspective, emotionally deep. A soft thinker.</p>
+      </div>
+      <div class="card pop">
+        <h3>Pop</h3>
+        <p>Trendy, upbeat, bubbly. Life of the party.</p>
+      </div>
+      <div class="card rock">
+        <h3>Rock</h3>
+        <p>Bold, expressive, intense. You live loud and proud.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quiz-section" id="quiz">
+    <h2>🧠 Music Personality Quiz</h2>
+    <p>Pick your favorite genre:</p>
+    <select id="genreSelect">
+      <option value="">-- Select One --</option>
+      <option value="trap">Trap</option>
+      <option value="lofi">Lo-fi</option>
+      <option value="pop">Pop</option>
+      <option value="rock">Rock</option>
+    </select>
+    <button class="btn quiz-btn" onclick="getResult()">Reveal My Vibe</button>
+    <div id="result" class="result-box"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 YourName • Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
